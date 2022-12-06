@@ -1,0 +1,334 @@
+*-------------------------------------------------------------------------------
+* Scheme name: minimal_colorblind
+*
+* Author: Ivica Rubil 
+*         The Institute of Economics, Zagreb
+*         irubil@gmail.hr
+*
+* Last change: 6 Dec 2022
+*-------------------------------------------------------------------------------
+
+* Based on s2color 
+	#include s2color
+
+*-------------------------------------------------------------------------------
+	
+* Graph dimensions 
+	graphsize y 3.6      
+	graphsize x 6    
+
+*-------------------------------------------------------------------------------
+
+* Background & plotregion
+	color     background      white	
+	linewidth plotregion      thin
+	color     plotregion_line none
+	color     plotregion      white	
+	
+*-------------------------------------------------------------------------------	
+
+* Legend
+	gsize        legend_key_xsize      8
+	gsize        key_label             medsmall
+	color        key_label             black
+	yesno        legend_span           no
+	linewidth    legend                thin
+	color        legend_line           none
+	color        legend                white
+	textboxstyle leg_title             body
+	clockdir     legend_title_position 11
+    textboxstyle leg_title             subheading
+    textboxstyle leg_subtitle          smbody
+    textboxstyle leg_caption           smbody
+    textboxstyle leg_note              smbody
+	gsize        legend_row_gap        tiny
+	gsize        legend_col_gap        tiny
+	gsize        legend_key_gap        tiny
+	gsize        legend_key_ysize      small
+	margin       legend                small
+
+*-------------------------------------------------------------------------------
+	
+* Title & subtitle
+
+	* Title
+		color    heading        black
+		clockdir title_position 12
+		yesno    title_span     yes
+		margin   heading        medsmall
+		gsize    heading        large
+
+	* Subtitle
+		color    subheading        black
+		clockdir subtitle_position 11
+		yesno    subtitle_span     no
+		margin   subheading        tiny
+		gsize    subheading        medsmall
+	
+*-------------------------------------------------------------------------------
+
+* Axes
+
+	* Axisline
+		linewidth axisline thin
+		color     axisline gs12
+	
+	* Ticks
+		tickposition axis_tick  inside
+		color        tick       gs12
+		color        minortick  gs12
+		color        tick_label black
+		gsize        tick       half_tiny
+		gsize        minortick  half_tiny
+		gsize        tick_label medsmall
+		linewidth    tick       medthin
+		linewidth    minortick  medthin
+	
+	* Title
+		color      axis_title    black
+		margin     axis_title    small
+		anglestyle vertical_tick 0
+		gsize      axis_title    medsmall
+	
+	* y-axis of bar graphs
+		axisstyle  bar_scale_horiz horizontal_default
+		axisstyle  bar_scale_vert  vertical_default
+	
+	* y-axis of dot graphs
+		axisstyle  dot_scale_horiz horizontal_default
+		axisstyle  dot_scale_vert  vertical_default
+		
+*-------------------------------------------------------------------------------
+	
+* Grid
+	yesno       draw_major_hgrid no
+	yesno       draw_major_vgrid no
+	yesno       draw_minor_hgrid no
+	yesno       draw_minor_vgrid no
+	yesno       grid_draw_min    yes
+	yesno       grid_draw_max    yes
+	linewidth   major_grid       thin
+	linewidth   major_grid       thin
+	linepattern major_grid       vshortdash
+	linepattern minor_grid       vshortdash
+	color       major_grid       gs14
+	color       minor_grid       gs14
+	
+*-------------------------------------------------------------------------------
+	
+* Note
+	yesno note_span  yes
+	gsize small_body small
+	
+*-------------------------------------------------------------------------------
+		
+* Reference line
+	linewidth   xyline medthin
+	color       xyline black
+	linepattern xyline shortdash
+	
+*-------------------------------------------------------------------------------
+	
+* Markers for tw scatter and tw connected
+	
+	* Symbols
+		symbol p1  circle_hollow
+		symbol p2  triangle_hollow
+		symbol p3  diamond_hollow
+		symbol p4  square_hollow
+		symbol p5  X
+		symbol p6  plus
+		symbol p7  circle
+		symbol p8  triangle
+		symbol p9  diamond
+		symbol p10 square
+	
+	* Colors
+		color p1  "31 119 180"
+		color p2  "255 127 14"
+		color p3  "44 160 44"
+		color p4  "214 39 40"
+		color p5  "148 103 189"
+		color p6  "140 86 75"
+		color p7  "227 119 194"
+		color p8  "127 127 127"
+		color p9  "188 189 34"
+		color p10 "23 190 207"
+		color p11 "174 199 232"
+		color p12 "255 187 120"
+		color p13 "152 223 138"
+		color p14 "255 152 150"
+		color p15 "197 176 213"
+
+*-------------------------------------------------------------------------------
+
+* Bar graphs
+
+	* Bar colors
+		color p1bar  "31 119 180"
+		color p2bar  "255 127 14"
+		color p3bar  "44 160 44"
+		color p4bar  "214 39 40"
+		color p5bar  "148 103 189"
+		color p6bar  "140 86 75"
+		color p7bar  "227 119 194"
+		color p8bar  "127 127 127"
+		color p9bar  "188 189 34"
+		color p10bar "23 190 207"
+		color p11bar "174 199 232"
+		color p12bar "255 187 120"
+		color p13bar "152 223 138"
+		color p14bar "255 152 150"
+		color p15bar "197 176 213"
+
+	* Bar outline colors
+		color p1barline  "31 119 180"
+		color p2barline  "255 127 14"
+		color p3barline  "44 160 44"
+		color p4barline  "214 39 40"
+		color p5barline  "148 103 189"
+		color p6barline  "140 86 75"
+		color p7barline  "227 119 194"
+		color p8barline  "127 127 127"
+		color p9barline  "188 189 34"
+		color p10barline "23 190 207"
+		color p11barline "174 199 232"
+		color p12barline "255 187 120"
+		color p13barline "152 223 138"
+		color p14barline "255 152 150"
+		color p15barline "197 176 213"
+		
+	* Bar outline width
+		linewidth p1barline  vthin
+		linewidth p2barline  vthin
+		linewidth p3barline  vthin
+		linewidth p4barline  vthin
+		linewidth p5barline  vthin
+		linewidth p6barline  vthin
+		linewidth p7barline  vthin
+		linewidth p8barline  vthin
+		linewidth p9barline  vthin
+		linewidth p10barline vthin
+		linewidth p11barline vthin
+		linewidth p12barline vthin
+		linewidth p13barline vthin
+		linewidth p14barline vthin
+		linewidth p15barline vthin
+
+*-------------------------------------------------------------------------------
+	
+* Confidence interval (e.g., in tw lfitci)
+	
+	* Color
+		color ci_line      gs13
+		color ci2_line     gs13
+		color ci_area      gs13
+		color ci2_area     gs13
+		color ci_arealine  gs13
+		color ci2_arealine gs13
+
+*-------------------------------------------------------------------------------
+	
+* Histogram 
+	color histogram      "31 119 180"
+	color histogram_line "31 119 180"
+
+*-------------------------------------------------------------------------------
+	
+* Line graphs (e.g., toway line, ts line)
+	
+	* Width
+		linewidth p1lineplot  medthick
+		linewidth p2lineplot  medthick
+		linewidth p3lineplot  medthick
+		linewidth p4lineplot  medthick
+		linewidth p5lineplot  medthick
+		linewidth p6lineplot  medthick
+		linewidth p7lineplot  medthick
+		linewidth p8lineplot  medthick
+		linewidth p9lineplot  medthick
+		linewidth p10lineplot medthick
+	
+	* Pattern
+		linepattern p1lineplot  solid
+		linepattern p2lineplot  solid
+		linepattern p3lineplot  solid
+		linepattern p4lineplot  solid
+		linepattern p5lineplot  solid
+		linepattern p6lineplot  solid
+		linepattern p7lineplot  solid
+		linepattern p8lineplot  solid
+		linepattern p9lineplot  solid
+		linepattern p10lineplot solid
+		
+	* Colors
+		color p1lineplot  "31 119 180"
+		color p2lineplot  "255 127 14"
+		color p3lineplot  "44 160 44"
+		color p4lineplot  "214 39 40"
+		color p5lineplot  "148 103 189"
+		color p6lineplot  "140 86 75"
+		color p7lineplot  "227 119 194"
+		color p8lineplot  "127 127 127"
+		color p9lineplot  "188 189 34"
+		color p10lineplot "23 190 207"
+		color p11lineplot "174 199 232"
+		color p12lineplot "255 187 120"
+		color p13lineplot "152 223 138"
+		color p14lineplot "255 152 150"
+		color p15lineplot "197 176 213"
+
+*-------------------------------------------------------------------------------	
+	
+* Lines for tw connected
+	
+	* Width
+		linewidth p1line  medium
+		linewidth p2line  medium
+		linewidth p3line  medium
+		linewidth p4line  medium
+		linewidth p5line  medium
+		linewidth p6line  medium
+		linewidth p7line  medium
+		linewidth p8line  medium
+		linewidth p9line  medium
+		linewidth p10line medium
+	
+	* Pattern
+		linepattern p1line  solid
+		linepattern p2line  solid
+		linepattern p3line  solid
+		linepattern p4line  solid
+		linepattern p5line  solid
+		linepattern p6line  solid
+		linepattern p7line  solid
+		linepattern p8line  solid
+		linepattern p9line  solid
+		linepattern p10line solid
+		
+	* Colors
+		color p1line  "31 119 180"
+		color p2line  "255 127 14"
+		color p3line  "44 160 44"
+		color p4line  "214 39 40"
+		color p5line  "148 103 189"
+		color p6line  "140 86 75"
+		color p7line  "227 119 194"
+		color p8line  "127 127 127"
+		color p9line  "188 189 34"
+		color p10line "23 190 207"
+		color p11line "174 199 232"
+		color p12line "255 187 120"
+		color p13line "152 223 138"
+		color p14line "255 152 150"
+		color p15line "197 176 213"
+
+*-------------------------------------------------------------------------------	
+	
+* Titles of panels in by-graphs
+	color textbox         none
+	color bylabel_outline none
+	
+*-------------------------------------------------------------------------------
+
+
