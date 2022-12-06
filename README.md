@@ -1,5 +1,9 @@
 # minimal_colorblind
-A minimalistic and color-blind-firendly Stata graph scheme.
+This is a minimalistic and color-blind-firendly Stata graph scheme.
+
+The distinctive features of the scheme, relative to the default Stata scheme s2color, are:
+
+[SCHEMEPACK](https://github.com/asjadnaqvi/stata-schemepack/blob/main/README.md)
 
 This is a minimalistic scheme where:
 (i) all graph elements apart from those depicting the data are de-emphasised to the necessary minimum, allowing thus the data content to dominate; 
