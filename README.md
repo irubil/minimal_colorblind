@@ -5,6 +5,7 @@ Its main features are:
 * the colour scheme is friendly to colour-blind people.
 
 The color scheme is borrowed from Asjad Naqvi's white_tableau scheme (see [schemepack](https://github.com/asjadnaqvi/stata-schemepack/blob/main/README.md)).
+
 To install the graph scheme, open Stata and issue the command:
 
 ``net install kaksongen, replace from(https://raw.githubusercontent.com/irubil/minimal_colorblind/main)``
