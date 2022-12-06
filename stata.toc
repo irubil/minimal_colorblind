@@ -1,0 +1,2 @@
+v 3
+p minimal_colorblind minimalistic and color-blind-friendly graph scheme
