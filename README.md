@@ -1,4 +1,4 @@
-# MINIMAL_COLORBLIND
+# minimal_colorblind
 A minimalistic and color-blind-firendly Stata graph scheme.
 
 This is a minimalistic scheme where:
