@@ -8,4 +8,4 @@ The color scheme is borrowed from Asjad Naqvi's white_tableau scheme (see [schem
 
 To install the graph scheme, open Stata and issue the command:
 
-``net install kaksongen, replace from(https://raw.githubusercontent.com/irubil/minimal_colorblind/main)``
+``net install minimal_colorblind, replace from(https://raw.githubusercontent.com/irubil/minimal_colorblind/main)``
