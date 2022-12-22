@@ -1,4 +1,4 @@
 v 3
 d minimal_colorblind. A minimalistic and colour-blind-friendly graph scheme.
 d Ivica Rubil (https://sites.google.com/view/ivicarubil/)
-f minimal_colorblind-scheme.scheme
+f scheme-minimal_colorblind.scheme
