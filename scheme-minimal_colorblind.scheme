@@ -74,15 +74,15 @@
 		color     axisline gs12
 	
 	* Ticks
-		tickposition axis_tick  inside
+		tickposition axis_tick  outside
 		color        tick       gs12
 		color        minortick  gs12
 		color        tick_label black
 		gsize        tick       half_tiny
 		gsize        minortick  half_tiny
 		gsize        tick_label medsmall
-		linewidth    tick       medthin
-		linewidth    minortick  medthin
+		linewidth    tick       thin
+		linewidth    minortick  thin
 	
 	* Title
 		color      axis_title    black
@@ -109,8 +109,8 @@
 	yesno       grid_draw_max    yes
 	linewidth   major_grid       thin
 	linewidth   major_grid       thin
-	linepattern major_grid       vshortdash
-	linepattern minor_grid       vshortdash
+	linepattern major_grid       solid
+	linepattern minor_grid       solid
 	color       major_grid       gs14
 	color       minor_grid       gs14
 	
@@ -330,5 +330,3 @@
 	color bylabel_outline none
 	
 *-------------------------------------------------------------------------------
-
-
